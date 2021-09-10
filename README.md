@@ -72,5 +72,5 @@ To run the unittest and coverage run the next lines:
 
 `` coverage html -d coverage_html``
 
-after run the las command you can find a coverage_html dir open the index.html and filter by **app/** for show only the app coverage 
+after run the last command you can find a folder with the name "coverage html" open the index.html file inside and filter by "app/" for show only the app coverage 
 
