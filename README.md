@@ -44,6 +44,8 @@ NOTE: if you don´t specify the port number docker won't expose the image to a h
 
 ## Try the api
 
+To try the api running in local run:
+
 [token]: you can find the token in ./app/properties file
 
 ``
@@ -52,6 +54,16 @@ curl -X 'GET'
   -H 'accept: application/json' 
   -H 'Authorization: Bearer [token]'
 ``
+
+to try the api deployed in heroku run:
+
+``
+curl -X 'GET' 
+  'https://exchange-api-c.herokuapp.com/exchange' 
+  -H 'accept: application/json' 
+  -H 'Authorization: Bearer token'
+``
+
 
 ## For unittest
 To run the unittest and coverage run the next lines:
