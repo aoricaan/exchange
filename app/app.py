@@ -1,10 +1,12 @@
-from fastapi import FastAPI, Security, Depends
+from fastapi import Depends
+from fastapi import FastAPI
+from fastapi import Security
 from fastapi.security import HTTPAuthorizationCredentials
 
 from app.core.auth import AuthBearer
 from app.core.exchange import exchange_rates_usd2mxn
-from app.models.exchange_model import Rates
 from app.core.limiter import Limiter
+from app.models.exchange_model import Rates
 
 app = FastAPI()
 security = AuthBearer()

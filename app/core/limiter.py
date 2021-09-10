@@ -31,11 +31,15 @@ class Limiter:
     def __call__(self, request: Request, response: Response):
         identifier = self.default_identifier(request)
         if identifier not in REQUESTS:
-            REQUESTS[identifier] = time.time()
+            REQUESTS[identifier] = {"time": time.time(), "requests": 1}
         else:
-            t = self.milliseconds - int((time.time() - REQUESTS[identifier]) * 1000)
-            if t > 0:
+            t = self.milliseconds - int((time.time() - REQUESTS[identifier]['time']) * 1000)
+            if REQUESTS[identifier]['requests'] < self.times:
+                REQUESTS[identifier]['requests'] += 1
+                return None
+            elif t > 0 and REQUESTS[identifier]['requests'] >= self.times:
                 raise HTTPException(
                     HTTP_429_TOO_MANY_REQUESTS, "Too Many Requests", headers={"Retry-After": str(t)}
                 )
-            REQUESTS.pop(identifier)
+            else:
+                REQUESTS.pop(identifier)
