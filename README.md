@@ -1,7 +1,7 @@
 # Api Exchange
 ***
 
-Nota: use of limiter and authorizer are for demonstration purposes only, use in production is not recommended 
+NOTE: use of limiter and authorizer are for demonstration purposes only, use in production is not recommended 
 
 ## Run Locally
 To run the commands you must be on the root of the repository
