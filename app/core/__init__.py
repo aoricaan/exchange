@@ -15,7 +15,3 @@ TOKEN_TEST = config['DEFAULT']['TOKEN_TEST']
 TIMES = int(config['DEFAULT']['TIMES'])
 MINUTES = int(config['DEFAULT']['MINUTES'])
 SECONDS = int(config['DEFAULT']['SECONDS'])
-
-
-print("TOKEN_BMX", TOKEN_BMX, bool(TOKEN_BMX))
-print("ACCESS_KEY_FIXER", ACCESS_KEY_FIXER, bool(ACCESS_KEY_FIXER))
