@@ -1,7 +1,13 @@
 # Api Exchange
 ***
 
-NOTE: use of limiter and authorizer are for demonstration purposes only, use in production is not recommended 
+Before to use you need add your keys in ./app/parameters files
+
+ACCESS_KEY_FIXER: value will be the api key got form [fixer.io](https://fixer.io/) only register and request your api key.
+
+TOKEN_BMX: value will be the api key got from [banxico.org.mx](https://www.banxico.org.mx/SieAPIRest/service/v1/token)
+
+NOTE: the use of limiter and authorizer in this project are for demonstration purposes only, use in production is not recommended 
 
 ## Run Locally
 To run the commands you must be on the root of the repository
